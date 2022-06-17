@@ -2,7 +2,7 @@ on: push
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: 🎉 Deploy to api.jamanit.com
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
@@ -18,7 +18,7 @@ jobs:
         npm install
         npm run build
 
-    - name: Remove Meta Files
+    - name: 📁 Remove Meta Files
       run: |
         rm -rf node_modules
         rm -rf src
@@ -33,7 +33,7 @@ jobs:
         rm tslint.json
         rm yarn.lock || true
     
-    - name: Top Level Change
+    - name: 📁 Top Level Change
       run: |
         mv ./dist/index.js ./index.js
         rm -rf dist
