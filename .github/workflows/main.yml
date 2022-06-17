@@ -36,6 +36,7 @@ jobs:
     - name: Top Level Change
       run: |
         mv ./dist/index.js ./index.js
+        rm -rf dist
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
