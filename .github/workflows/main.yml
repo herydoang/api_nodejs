@@ -17,14 +17,14 @@ jobs:
       run: |
         npm install
         npm run build
-        rm -rf node_modules || true
 
     - name: Management Files
       run: |
+        rm -rf node_modules
         mkdir -p ./temp
-        mv . ./temp
+        mv ./ ./temp
         mv ./temp/.env ./.env
-        mv ./temp/dist/* .
+        mv ./temp/dist/* ./
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
