@@ -18,13 +18,24 @@ jobs:
         npm install
         npm run build
 
-    - name: Management Files
+    - name: Remove Meta Files
       run: |
         rm -rf node_modules
-        mkdir -p ./temp
-        mv * ./temp
-        mv ./temp/.env ./.env
-        mv ./temp/dist/* ./
+        rm src
+        rm .editorconfig
+        rm .eslintignore
+        rm .eslintrc.json
+        rm .gitignore
+        rm nodemon.json
+        rm package.json
+        rm README.md
+        rm tsconfig.json
+        rm tslint.json
+        rm yarn.lock
+    
+    - name: Top Level Change
+      run: |
+        mv ./dist/index.js ./index.js
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
