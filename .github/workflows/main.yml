@@ -22,7 +22,7 @@ jobs:
       run: |
         rm -rf node_modules
         mkdir -p ./temp
-        mv ./ ./temp
+        mv * ./temp
         mv ./temp/.env ./.env
         mv ./temp/dist/* ./
     
