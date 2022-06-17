@@ -21,7 +21,7 @@ jobs:
     - name: Remove Meta Files
       run: |
         rm -rf node_modules
-        rm src
+        rm -rf src
         rm .editorconfig
         rm .eslintignore
         rm .eslintrc.json
