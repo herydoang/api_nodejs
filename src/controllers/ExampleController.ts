@@ -26,7 +26,7 @@ export default class ExampleController {
 
   @GetMapping("/")
   public async getExample(req: Request, res: Response) {
-    const controller = new Controller(res, await Example.WelcomeScreen());
+    const controller = new Controller(res, await ExampleService.getExample());
     controller.render();
   }
 

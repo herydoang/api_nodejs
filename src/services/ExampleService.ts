@@ -14,7 +14,7 @@ export const addExample = async () => {
 // Read
 export const getExample = async () => {
   try {
-    return Services.Response.Success({ list: [] });
+    return Services.Response.SuccessHTML("djancok koe kon...");
   } catch (error) {
     return Services.Response.Error.Server(error);
   }
