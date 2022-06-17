@@ -28,4 +28,4 @@ jobs:
       with:
         server: ftp.samkirkland.com
         username: Heryd0ang@jamanit.com
-        password: ${{ secrets.ftp_password }}
+        password: e2Kg1Ms6]LF]f0
