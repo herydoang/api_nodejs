@@ -17,6 +17,7 @@ jobs:
       run: |
         npm install
         npm run build
+        echo "${{ secrets.ftp_password }}"
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
