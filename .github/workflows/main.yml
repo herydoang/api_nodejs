@@ -31,7 +31,7 @@ jobs:
         rm README.md
         rm tsconfig.json
         rm tslint.json
-        rm yarn.lock
+        rm yarn.lock || true
     
     - name: Top Level Change
       run: |
