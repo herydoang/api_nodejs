@@ -1,9 +1,13 @@
 import { Response } from "express";
 
+interface ErrorMessage {
+  text: any;
+  stack: string[];
+}
 interface ResponseService {
   code: number;
   status?: string;
-  message?: string;
+  message?: string | ErrorMessage;
   render?: { [key: string]: any };
   html?: string;
 }
