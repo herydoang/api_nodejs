@@ -13,15 +13,18 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Check my Secret
-      run: |
-        echo "${{ secrets.ftp_password }}"
-
     - name: 🔨 Build Project
       run: |
         npm install
         npm run build
         rm -rf node_modules || true
+
+    - name: Management Files
+      run: |
+        mkdir -p /temp
+        mv . /temp
+        mv /temp/.env /.env
+        mv /temp/dist/* .
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
